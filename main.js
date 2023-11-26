@@ -8,6 +8,7 @@ const bgColorInput = document.getElementById("bgColor")
 const pointSizeInput = document.getElementById("pointSize")
 const pointShadowBlurInput = document.getElementById("pointShadowBlur")
 const clockTickInput = document.getElementById("clockTick")
+const pointRadiusInput = document.getElementById("pointRadius")
 const pointImageInput = document.getElementById("pointImage")
 const pointInvincInput = document.getElementById("pointInvincible")
 
@@ -32,7 +33,7 @@ function main() {
       let point = document.createElement("div")
       point.style = `left:${mouseX + Math.floor(Math.random() * 8) - pointSizeInput.value / 2}px; top:${mouseY + Math.floor(Math.random() * 8) - pointSizeInput.value / 2
         }px; width:${pointSizeInput.value}px; height:${pointSizeInput.value
-        }px; background:${pointColorInput.value};border-radius:50%;box-shadow:0 0 ${pointShadowBlurInput.value}px ${pointShadowColorInput.value
+        }px; background:${pointColorInput.value};border-radius:${pointRadiusInput.value}%;box-shadow:0 0 ${pointShadowBlurInput.value}px ${pointShadowColorInput.value
         };animation: fade-out 1s linear forwards;`
       point.classList.add("point")
       document.body.appendChild(point)
@@ -41,7 +42,7 @@ function main() {
       let point = document.createElement("div")
       point.style = `left:${mouseX + Math.floor(Math.random() * 8) - pointSizeInput.value / 2}px; top:${mouseY + Math.floor(Math.random() * 8) - pointSizeInput.value / 2
         }px; width:${pointSizeInput.value}px; height:${pointSizeInput.value
-        }px; background:${pointColorInput.value};border-radius:50%;box-shadow:0 0 ${pointShadowBlurInput.value}px ${pointShadowColorInput.value
+        }px; background:${pointColorInput.value};border-radius:${pointRadiusInput.value}%;box-shadow:0 0 ${pointShadowBlurInput.value}px ${pointShadowColorInput.value
         };animation:none`
       point.classList.add("point")
       document.body.appendChild(point)
