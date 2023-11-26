@@ -39,7 +39,6 @@ body {
   box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.349);
   z-index: 999;
   transition: 0.3s linear;
-  margin-inline: auto;
 }
 
 .row {

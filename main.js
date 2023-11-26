@@ -9,7 +9,6 @@ const pointSizeInput = document.getElementById("pointSize")
 const pointShadowBlurInput = document.getElementById("pointShadowBlur")
 const clockTickInput = document.getElementById("clockTick")
 const pointRadiusInput = document.getElementById("pointRadius")
-const pointImageInput = document.getElementById("pointImage")
 const pointInvincInput = document.getElementById("pointInvincible")
 
 const menuElem = document.getElementById("menu")
