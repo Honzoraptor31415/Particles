@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <title>Playing around with Javascript</title>
+</head>
+
+<body>
+  <style>
+    .checkbox-wrapper-17 input[type=checkbox] {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+
+    .checkbox-wrapper-17 label {
+      --size: 40px;
+      cursor: pointer;
+      width: var(--size);
+      height: calc(var(--size) / 2);
+      background: rgb(144, 144, 144);
+      display: block;
+      border-radius: 100px;
+      position: relative;
+    }
+
+    .checkbox-wrapper-17 label:after {
+      content: '';
+      position: absolute;
+      top: 6%;
+      left: 2.5%;
+      width: calc(50% - 5%);
+      height: calc(100% - 11%);
+      background: #fff;
+      border-radius: 90px;
+      transition: 0.3s;
+    }
+
+    .checkbox-wrapper-17 input:checked+label {
+      background: #000000;
+    }
+
+    .checkbox-wrapper-17 input:checked+label:after {
+      left: calc(100% - 2.5%);
+      transform: translateX(-100%);
+    }
+
+    .checkbox-wrapper-17 label:active:after {
+      width: 55%;
+    }
+
+    .checkbox-wrapper-17 {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+  <button onclick="menu('20px')" class="iconBtn menuIcon" id="menuBtn">
+    <img src="menu-icon.svg" class="icon" alt="Show menu" />
+  </button>
+  <div id="menu">
+    <div class="x">
+      <button class="iconBtn" onclick="menu('-350px')">
+        <img src="cross.svg" class="icon" alt="Zavřít" />
+      </button>
+    </div>
+    <div class="row">
+      <p class="rowText">Barva pozadí</p>
+      <input id="bgColor" type="color" value="#d0d0d0" />
+    </div>
+    <div class="row">
+      <p class="rowText">Barva čáry</p>
+      <input id="pointColor" type="color" />
+    </div>
+    <div class="row">
+      <p class="rowText">Barva stínu</p>
+      <input id="pointShadowColor" type="color" />
+    </div>
+    <div class="row">
+      <p class="rowText">Nemizející body</p>
+      <div class="checkbox-wrapper-17">
+        <input type="checkbox" id="pointInvincible" /><label for="pointInvincible"></label>
+      </div>
+    </div>
+    <div class="row">
+      <p class="rowText">Rozmazání stínu (px)</p>
+      <input id="pointShadowBlur" value="5" min="1" type="number" />
+    </div>
+    <div class="row">
+      <p class="rowText">Velokost bodu (px)</p>
+      <input id="pointSize" value="20" min="1" type="number" />
+    </div>
+    <div class="row">
+      <p class="rowText">Časový rozestup (ms)</p>
+      <input id="clockTick" value="16" min="1" type="number" />
+    </div>
+    <div class="centerRow">
+      <button class="clearBtn" type="button" id="clear">Vymazat všechny body</button>
+    </div>
+    <div class="row hidden">
+      <p class="rowText">Tvar bodu</p>
+      <input id="pointImage" accept="image/png, image/gif, image/jpeg" type="file" />
+      <label class="pointImgLabel hidden" for="pointImage">Vybrat soubor</label>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
