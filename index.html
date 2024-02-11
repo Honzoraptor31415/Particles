@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <title>Playing around with Javascript</title>
+  <title>Javascript particles</title>
 </head>
 
 <body>
@@ -66,48 +66,48 @@
   <div id="menu">
     <div class="x">
       <button class="iconBtn" onclick="menu('-350px')">
-        <img src="cross.svg" class="icon" alt="Zavřít" />
+        <img src="cross.svg" class="icon" alt="Close" />
       </button>
     </div>
     <div class="row">
-      <p class="rowText">Barva pozadí</p>
+      <p class="rowText">Background color</p>
       <input id="bgColor" type="color" value="#d0d0d0" />
     </div>
     <div class="row">
-      <p class="rowText">Barva bodu</p>
+      <p class="rowText">Point color</p>
       <input id="pointColor" type="color" />
     </div>
     <div class="row">
-      <p class="rowText">Barva stínu</p>
+      <p class="rowText">Shadow color</p>
       <input id="pointShadowColor" type="color" />
     </div>
     <div class="row">
-      <p class="rowText">Nemizející body</p>
+      <p class="rowText">Non disappearing points</p>
       <div class="checkbox-wrapper-17">
         <input type="checkbox" id="pointInvincible" /><label for="pointInvincible"></label>
       </div>
     </div>
     <div class="row">
-      <p class="rowText">Rozmazání stínu (px)</p>
+      <p class="rowText">Shadow blur (px)</p>
       <input id="pointShadowBlur" value="5" min="1" type="number" />
     </div>
     <div class="row">
-      <p class="rowText">Velokost bodu (px)</p>
+      <p class="rowText">Point size (px)</p>
       <input id="pointSize" value="20" min="1" type="number" />
     </div>
     <div class="row">
-      <p class="rowText">Zaoblení rohů (%)</p>
+      <p class="rowText">Border radius (%)</p>
       <input id="pointRadius" value="50" min="0" max="50" type="number" />
     </div>
     <div class="row">
-      <p class="rowText">Časový rozestup (ms)</p>
+      <p class="rowText">Time delay (ms)</p>
       <input id="clockTick" value="16" min="1" type="number" />
     </div>
     <div class="centerRow">
-      <button class="clearBtn" type="button" id="clear">Vymazat všechny body</button>
+      <button class="clearBtn" type="button" id="clear">Delete everything</button>
     </div>
     <div class="row hidden">
-      <p class="rowText">Tvar bodu</p>
+      <p class="rowText">Shape</p>
       <input id="pointImage" accept="image/png, image/gif, image/jpeg" type="file" />
       <label class="pointImgLabel hidden" for="pointImage">Vybrat soubor</label>
     </div>
